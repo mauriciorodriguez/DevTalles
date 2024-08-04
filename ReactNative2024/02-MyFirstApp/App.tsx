@@ -1,10 +1,21 @@
 import React from 'react'
-import { Text, View } from 'react-native'
+import { SafeAreaView } from 'react-native'
+import { PaperProvider } from 'react-native-paper'
+import IonIcon from "react-native-vector-icons/Ionicons"
+import { CounterM3Screen } from './src/presentation/screens/CounterM3Screen'
 
 export const App = () => {
   return (
-    <View>
-      <Text>Hola Mundo!</Text>
-    </View>
+    <PaperProvider
+      settings={{
+        icon: (props) => <IonIcon {...props} />
+      }}
+    >
+      <SafeAreaView style={{ flex: 1 }}>
+        {/*<HelloWordScreen name='Mauricio Ezequiel Rodriguez' />*/}
+        {/*<CounterScreen />*/}
+        <CounterM3Screen />
+      </SafeAreaView>
+    </PaperProvider>
   )
 }
