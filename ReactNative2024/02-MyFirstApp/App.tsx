@@ -2,7 +2,7 @@ import React from 'react'
 import { SafeAreaView } from 'react-native'
 import { PaperProvider } from 'react-native-paper'
 import IonIcon from "react-native-vector-icons/Ionicons"
-import { DimensionScreen } from './src/presentation/screens'
+import { PositionScreen } from './src/presentation/screens'
 
 export const App = () => {
   return (
@@ -16,7 +16,8 @@ export const App = () => {
         {/*<CounterScreen />*/}
         {/*<CounterM3Screen />*/}
         {/* <BoxObjectModelScreen /> */}
-        <DimensionScreen />
+        {/* <DimensionScreen /> */}
+        <PositionScreen />
       </SafeAreaView>
     </PaperProvider>
   )
