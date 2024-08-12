@@ -7,6 +7,7 @@ export const App = () => {
   return (
     <NavigationContainer>
       <SideMenuNavigator />
+      {/* <BottomTabsNavigator /> */}
     </NavigationContainer>
   )
 }
