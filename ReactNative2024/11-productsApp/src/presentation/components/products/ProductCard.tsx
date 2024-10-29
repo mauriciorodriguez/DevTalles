@@ -12,6 +12,7 @@ interface Props {
 
 export const ProductCard = ({product}: Props) => {
   const navigation = useNavigation<NavigationProp<RootStackParams>>();
+  console.log(product.images.flat());
 
   return (
     <Card

@@ -14,6 +14,7 @@ import {
   getProductById,
   updateCreateProduct,
 } from '../../../actions/auth/products';
+import {CameraAdapter} from '../../../config/api/adapters/camera-adapter';
 import {Gender, Product, Size} from '../../../domain/entities/product';
 import {ProductImages} from '../../components/products/ProductImages';
 import {MyIcon} from '../../components/ui/MyIcon';
@@ -53,7 +54,14 @@ export const ProductScreen = ({route}: Props) => {
   return (
     <Formik initialValues={product} onSubmit={mutation.mutate}>
       {({handleChange, handleSubmit, values, errors, setFieldValue}) => (
-        <MainLayout title={values.title} subTitle={`Precio: ${values.price}`}>
+        <MainLayout
+          title={values.title}
+          subTitle={`Precio: ${values.price}`}
+          rightAction={async () => {
+            const photos = await CameraAdapter.takePicture();
+            setFieldValue('images', [...values.images, ...photos]);
+          }}
+          rightActionIcon="camera-outline">
           <ScrollView style={{flex: 1}}>
             <Layout
               style={{
@@ -123,7 +131,7 @@ export const ProductScreen = ({route}: Props) => {
                     }}
                     onPress={() =>
                       setFieldValue(
-                        'sized',
+                        'sizes',
                         values.sizes.includes(size)
                           ? values.sizes.filter(s => s !== size)
                           : [...values.sizes, size],

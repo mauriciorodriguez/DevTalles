@@ -1,5 +1,10 @@
 # [BACKEND](https://github.com/mauriciorodriguez/DevTalles/tree/main/ReactNative2024/10-tesloshop-backend)
 
+## Credenciales
+
+test1@google.com
+Abc123
+
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
 # Getting Started
