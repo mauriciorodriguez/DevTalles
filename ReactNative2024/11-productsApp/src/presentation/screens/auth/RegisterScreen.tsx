@@ -6,7 +6,7 @@ import {ScrollView} from 'react-native-gesture-handler';
 import {MyIcon} from '../../components/ui/MyIcon';
 import {RootStackParams} from '../../navigation/StackNavigator';
 
-interface Props extends StackScreenProps<RootStackParams, 'ReisterScreen'> {}
+interface Props extends StackScreenProps<RootStackParams, 'RegisterScreen'> {}
 
 export const RegisterScreen = ({navigation}: Props) => {
   const {height} = useWindowDimensions();

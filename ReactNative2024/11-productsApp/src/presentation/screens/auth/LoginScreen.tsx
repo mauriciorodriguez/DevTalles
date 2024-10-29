@@ -71,7 +71,7 @@ export const LoginScreen = ({navigation}: Props) => {
           <Text
             status="primary"
             category="s1"
-            onPress={() => navigation.navigate('ReisterScreen')}>
+            onPress={() => navigation.navigate('RegisterScreen')}>
             {' '}
             crea una
           </Text>

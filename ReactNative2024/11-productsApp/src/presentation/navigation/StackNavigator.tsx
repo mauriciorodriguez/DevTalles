@@ -11,7 +11,7 @@ import {ProductScreen} from '../screens/products/ProductScreen';
 export type RootStackParams = {
   LoginScreen: undefined;
   LoadingScreen: undefined;
-  ReisterScreen: undefined;
+  RegisterScreen: undefined;
   ProductScreen: {productId: string};
   HomeScreen: undefined;
 };
@@ -50,7 +50,7 @@ export const StackNavigator = () => {
       />
       <Stack.Screen
         options={{cardStyleInterpolator: fadeAnimation}}
-        name="ReisterScreen"
+        name="RegisterScreen"
         component={RegisterScreen}
       />
       <Stack.Screen name="ProductScreen" component={ProductScreen} />
